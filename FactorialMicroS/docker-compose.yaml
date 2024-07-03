@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  main:
+    image: lazeeboyz/main:latest
+    build: ./main
+    ports:
+        - target: 5000
+          published: 5000
+    deploy:
+      replicas: 1
+  fizzbuzz:
+    image: lazeeboyz/fizzbuzz:latest
+    build: ./fizzbuzz
+    ports:
+        - target: 5001
+          published: 5001
+    deploy:
+      replicas: 1
+  factorial:
+    image: lazeeboyz/factorial:latest
+    build: ./factorial
+    ports:
+        - target: 5002
+          published: 5002
